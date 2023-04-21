@@ -29,10 +29,25 @@ class Task
     #[ORM\Column]
     private ?bool $isDone = null;
 
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    private ?User $user = null;
+
     public function __construct()
     {
         $this->createdAt = new \Datetime();
         $this->isDone = false;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 
     public function getId(): ?int
