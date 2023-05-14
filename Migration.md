@@ -49,3 +49,13 @@ cp -r old_project/src/web my_project/templates
 ```
 
 On vérifie toujours que les bons namespace sont utilisés dans les fichiers copiés, le cas contraire une erreur sera levée.
+
+Le nouveau projet sera alors sur la version 6 de symfony. Il faudra alors vérifier que les fichiers de configuration sont bien à jour. Pour cela, il faut comparer les fichiers de configuration du nouveau projet avec ceux de l'ancien projet. Si des différences sont présentes, il faudra les ajouter au nouveau projet. Il faudra aussi vérifier que les fichiers de configuration du nouveau projet sont bien à jour avec la version 6 de symfony. Pour cela, il faut se référer à la documentation de symfony.
+
+## Installation des dépendances
+
+On installe les dépendances avec la commande :
+
+```bash
+composer install
+```
